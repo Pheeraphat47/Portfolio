@@ -1,6 +1,5 @@
 'use client';
 
-import { FaBriefcase } from 'react-icons/fa';
 import Image from 'next/image';
 import innovasive from "../../../public/innovasive.png"
 import uxasso from "../../../public/uxasso.jpg"

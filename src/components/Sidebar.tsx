@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import profile from "../../public/profile.jpg"
-import { IoChevronDownOutline, IoMailOutline, IoPhonePortraitOutline, IoCalendarOutline, IoLocationOutline, IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io5';
+import { IoChevronDownOutline, IoMailOutline, IoCalendarOutline } from 'react-icons/io5';
 
 export default function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);

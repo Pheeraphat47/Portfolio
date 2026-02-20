@@ -1,6 +1,6 @@
 'use client';
 
-import { FaBook, FaBriefcase, FaCode, FaTrophy, FaProjectDiagram, FaChartLine, FaCheckCircle, FaSearch } from 'react-icons/fa';
+import { FaBook, FaBriefcase, FaCode, FaTrophy, FaCheckCircle } from 'react-icons/fa';
 import Image from 'next/image';
 import innovasive from "../../../public/innovasive.png"
 import uxasso from "../../../public/uxasso.jpg"

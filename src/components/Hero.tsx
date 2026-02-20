@@ -19,7 +19,7 @@ export default function Hero() {
                         Hi, I&apos;m <span className="text-line-green">Pheeraphat Dherachaisuphakij</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                        Senior IT Student at King Mongkut's University of Technology Thonburi , Passionate about creating impactful digital products through data-driven decisions and user-centric design. 
+                        Senior IT Student at King Mongkut&apos;s University of Technology Thonburi , Passionate about creating impactful digital products through data-driven decisions and user-centric design. 
                     </p>
 
                     <div className="flex justify-center md:justify-start gap-6 pt-6 text-2xl text-gray-500">

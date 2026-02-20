@@ -6,8 +6,10 @@ import Navbar from './Navbar';
 import AboutPage from './pages/AboutPage';
 import PortfolioPage from './pages/PortfolioPage';
 import BlogPage from './pages/BlogPage';
+
 export default function MainLayout() {
-  const [activePage, setActivePage] = useState('about');
+  const [activePage] = useState('about');
+
 
   const renderActivePage = () => {
     switch (activePage) {
@@ -25,9 +27,9 @@ export default function MainLayout() {
   return (
     <main>
       <Sidebar />
-      
+
       <div className="main-content">
-        <Navbar activePage={activePage} onPageChange={setActivePage} />
+        <Navbar />
         {renderActivePage()}
       </div>
     </main>
