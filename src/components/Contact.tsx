@@ -23,13 +23,8 @@ export default function Contact() {
                         <ul className="space-y-3">
                             <li>
                                 <a href="mailto:dpheeraphat2547@gmail.com" className="flex items-center justify-center md:justify-start gap-3 text-gray-400 hover:text-white transition-colors">
-                                    <FaEnvelope /> dpheeraphat2547@gmail.com
+                                    <FaEnvelope /> pheeraphat.dhi@gmail.com
                                 </a>
-                            </li>
-                            <li>
-                                <span className="flex items-center justify-center md:justify-start gap-3 text-gray-400">
-                                    <FaPhone /> +66 (0) 99-999-9999
-                                </span>
                             </li>
                         </ul>
                     </div>
