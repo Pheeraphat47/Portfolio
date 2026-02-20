@@ -13,14 +13,13 @@ export default function Hero() {
                 {/* Text Content */}
                 <div className="flex-1 text-center md:text-left space-y-6">
                     <h2 className="text-sm font-semibold tracking-widest text-line-green uppercase">
-                        Product Management & UX Research
+                        Interested in Product Management , AI and Business
                     </h2>
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                        Hi, I&apos;m <span className="text-line-green">Pheeraphat.</span>
+                        Hi, I&apos;m <span className="text-line-green">Pheeraphat Dherachaisuphakij</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                        I bridge the gap between business goals, user needs, and technical feasibility. Passionate about
-                        creating impactful digital products through data-driven decisions and user-centric design.
+                        Senior IT Student at King Mongkut's University of Technology Thonburi , Passionate about creating impactful digital products through data-driven decisions and user-centric design. 
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">

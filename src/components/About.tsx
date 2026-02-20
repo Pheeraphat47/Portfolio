@@ -9,17 +9,49 @@ export default function About() {
                     <div className="w-16 h-1 bg-line-green mx-auto rounded-full"></div>
                 </div>
 
-                <div className="max-w-4xl mx-auto space-y-8 text-lg text-gray-600 leading-relaxed text-center md:text-left">
-                    <p>
-                        I&apos;m passionate about <span className="font-semibold text-gray-900">Product Management</span>, <span className="font-semibold text-gray-900">Business Development</span>, <span className="font-semibold text-gray-900">Quality Assurance</span>, and <span className="font-semibold text-gray-900">UX Research</span>.
-                    </p>
-                    <p>
-                        As the former vice president of <span className="font-semibold text-line-green">SAMO SIT</span>, I have experience working with cross-functional teams and organizing activities for SIT KMUTT students.
-                        I recently completed the <span className="font-semibold text-gray-900">Google Project Management Career Certificate</span>, which covers traditional and Agile project management.
-                    </p>
-                    <p>
-                        My intern roles as a software developer and UX researcher have refined my technical and user-centered design skills. Additionally, participating in Hackathons and Startup Competitions has enhanced my creativity, solution development, and product creation abilities.
-                    </p>
+                <div className="max-w-4xl mx-auto space-y-8 text-lg text-gray-600 leading-relaxed">
+                    {/* Education Header */}
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-4 mb-6">
+                        <div>
+                            <h3 className="text-xl font-bold text-gray-900">King Mongkut’s University of Technology Thonburi, Bangkok, Thailand</h3>
+                            <p className="text-gray-500">Bachelor of Science in Information Technology</p>
+                        </div>
+                        <span className="text-line-green font-semibold mt-2 md:mt-0">2022 – Present</span>
+                    </div>
+
+                    {/* Achievements List */}
+                    <ul className="space-y-4">
+                        <li className="flex gap-3">
+                            <span className="text-line-green font-bold mt-1">●</span>
+                            <span>Recipient of <span className="font-semibold text-gray-900">Saad-Lueang-RueangRung Creativity and Innovation Scholarship</span> with 100% tuition fee waiver and monthly stipends supported, KMUTT Academic year 2023</span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="text-line-green font-bold mt-1">●</span>
+                            <span>Recipient of <span className="font-semibold text-gray-900">Chiaranaiphet Scholarship</span>, KMUTT Academic year 2023</span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="text-line-green font-bold mt-1">●</span>
+                            <span><span className="font-semibold text-gray-900">SIT Outstanding Accomplishment Scholarship</span></span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="text-line-green font-bold mt-1">●</span>
+                            <span>Former Vice President of <span className="font-semibold text-gray-900">SAMO SIT</span></span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="text-line-green font-bold mt-1">●</span>
+                            <span>Beta Microsoft Learn Student Ambassadors and Google Developer Student Club (Core Team)</span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="text-line-green font-bold mt-1">●</span>
+                            <span>Member of SIT MUSIC and SIT PHOTO CLUB</span>
+                        </li>
+                    </ul>
+                    {/* Additional Info */}
+                    <div className="pt-6 space-y-4">
+                        <p>
+                            <span className="font-bold text-gray-900">Certifications:</span> Google Project Management Certificate (Coursera), Product Management Bootcamp (8th) from Skooldio (Both Discovery and Delivery phase)
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
