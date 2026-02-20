@@ -22,21 +22,6 @@ export default function Hero() {
                         Senior IT Student at King Mongkut's University of Technology Thonburi , Passionate about creating impactful digital products through data-driven decisions and user-centric design. 
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
-                        <Link
-                            href="#projects"
-                            className="px-8 py-3 bg-line-green text-white font-medium rounded-lg hover:bg-[#05b34c] transition-colors w-full sm:w-auto text-center"
-                        >
-                            View Projects
-                        </Link>
-                        <Link
-                            href="#contact"
-                            className="px-8 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-800 hover:text-gray-900 transition-colors w-full sm:w-auto text-center"
-                        >
-                            Contact Me
-                        </Link>
-                    </div>
-
                     <div className="flex justify-center md:justify-start gap-6 pt-6 text-2xl text-gray-500">
                         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
                             <FaGithub />
