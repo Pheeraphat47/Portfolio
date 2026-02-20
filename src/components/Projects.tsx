@@ -36,7 +36,7 @@ export default function Projects() {
             <div className="container mx-auto px-6">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-                    <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                    <div className="w-16 h-1 bg-line-green mx-auto rounded-full"></div>
                     <p className="mt-4 text-gray-600">Some of my works ranging from Web Development to Product Design.</p>
                 </div>
 
@@ -53,10 +53,10 @@ export default function Projects() {
                                     />
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col">
-                                    <span className="text-xs font-semibold tracking-wider text-blue-600 uppercase mb-2">
+                                    <span className="text-xs font-semibold tracking-wider text-line-green uppercase mb-2">
                                         {project.category}
                                     </span>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-line-green transition-colors">
                                         {project.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm line-clamp-3">

@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+  --color-line-green: #06C755;
+  --color-line-dark: #1E1E1E;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --line-green: #06C755;
 }
 
 body {

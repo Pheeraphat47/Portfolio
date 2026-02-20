@@ -6,8 +6,8 @@ import { IoClose, IoMenu } from 'react-icons/io5';
 
 const navLinks = [
   { name: 'About', href: '#about' },
+
   { name: 'Experience', href: '#experience' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -26,9 +26,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-gray-900">
@@ -41,7 +40,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-600 hover:text-line-green font-medium transition-colors"
             >
               {link.name}
             </Link>
@@ -58,15 +57,14 @@ export default function Navbar() {
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 py-8 transition-all duration-300 ease-in-out md:hidden ${
-            isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
-          }`}
+          className={`absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 py-8 transition-all duration-300 ease-in-out md:hidden ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+            }`}
         >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-lg font-medium text-gray-700 hover:text-blue-600"
+              className="text-lg font-medium text-gray-700 hover:text-line-green"
               onClick={() => setIsOpen(false)}
             >
               {link.name}

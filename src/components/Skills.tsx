@@ -21,7 +21,7 @@ export default function Skills() {
             <div className="container mx-auto px-6">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">Skills & Proficiencies</h2>
-                    <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                    <div className="w-16 h-1 bg-line-green mx-auto rounded-full"></div>
                     <p className="mt-4 text-gray-600">A mix of technical knowledge and interpersonal abilities.</p>
                 </div>
 
@@ -35,7 +35,7 @@ export default function Skills() {
                                 {skillGroup.items.map((skill, idx) => (
                                     <span
                                         key={idx}
-                                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-green-50 hover:text-line-green transition-colors"
                                     >
                                         {skill}
                                     </span>

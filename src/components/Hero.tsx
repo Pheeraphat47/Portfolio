@@ -12,11 +12,11 @@ export default function Hero() {
             <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12">
                 {/* Text Content */}
                 <div className="flex-1 text-center md:text-left space-y-6">
-                    <h2 className="text-sm font-semibold tracking-widest text-blue-600 uppercase">
+                    <h2 className="text-sm font-semibold tracking-widest text-line-green uppercase">
                         Product Management & UX Research
                     </h2>
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                        Hi, I&apos;m <span className="text-blue-600">Pheeraphat.</span>
+                        Hi, I&apos;m <span className="text-line-green">Pheeraphat.</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
                         I bridge the gap between business goals, user needs, and technical feasibility. Passionate about
@@ -26,7 +26,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
                         <Link
                             href="#projects"
-                            className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto text-center"
+                            className="px-8 py-3 bg-line-green text-white font-medium rounded-lg hover:bg-[#05b34c] transition-colors w-full sm:w-auto text-center"
                         >
                             View Projects
                         </Link>
@@ -42,7 +42,7 @@ export default function Hero() {
                         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
                             <FaGithub />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-line-green transition-colors">
                             <FaLinkedin />
                         </a>
                         <a href="mailto:dpheeraphat2547@gmail.com" className="hover:text-red-500 transition-colors">
@@ -54,7 +54,7 @@ export default function Hero() {
                 {/* Image Content */}
                 <div className="flex-1 flex justify-center md:justify-end relative">
                     <div className="relative w-64 h-64 md:w-96 md:h-96">
-                        <div className="absolute inset-0 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                        <div className="absolute inset-0 bg-green-100 rounded-full blur-3xl opacity-50 -z-10"></div>
                         <Image
                             src={profile}
                             alt="Pheeraphat Dherachaisuphakij"
