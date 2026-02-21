@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { IoClose, IoChevronForward } from 'react-icons/io5';
+import { FaChevronLeft, FaChevronRight, FaFilePdf, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface ExperienceItem {
     id: number;
@@ -9,6 +11,103 @@ interface ExperienceItem {
     company: string;
     duration: string;
     details: string[];
+    images?: string[];
+    pdfFile?: string;
+}
+
+// Slideshow Component
+function ImageSlideshow({ 
+    images, 
+    alt, 
+    className = "",
+    imageClassName = "",
+    showIndicators = true
+}: { 
+    images: string[]; 
+    alt: string; 
+    className?: string;
+    imageClassName?: string;
+    showIndicators?: boolean;
+}) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const goToPrevious = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    };
+
+    const goToNext = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    };
+
+    const goToSlide = (e: React.MouseEvent, index: number) => {
+        e.stopPropagation();
+        setCurrentIndex(index);
+    };
+
+    if (images.length === 1) {
+        return (
+            <div className={`relative ${className}`}>
+                <Image
+                    src={images[0]}
+                    alt={alt}
+                    fill
+                    className={imageClassName}
+                />
+            </div>
+        );
+    }
+
+    return (
+        <div className={`relative ${className}`}>
+            <Image
+                src={images[currentIndex]}
+                alt={`${alt} - ${currentIndex + 1}`}
+                fill
+                className={imageClassName}
+            />
+            
+            {/* Navigation Arrows */}
+            <button
+                onClick={goToPrevious}
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors z-10"
+                aria-label="Previous image"
+            >
+                <FaChevronLeft size={16} />
+            </button>
+            <button
+                onClick={goToNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors z-10"
+                aria-label="Next image"
+            >
+                <FaChevronRight size={16} />
+            </button>
+
+            {/* Indicators */}
+            {showIndicators && (
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {images.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={(e) => goToSlide(e, index)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                                index === currentIndex 
+                                    ? 'bg-white w-4' 
+                                    : 'bg-white/50 hover:bg-white/80'
+                            }`}
+                            aria-label={`Go to image ${index + 1}`}
+                        />
+                    ))}
+                </div>
+            )}
+
+            {/* Image Counter */}
+            <div className="absolute top-3 right-3 px-2 py-1 bg-black/50 text-white text-xs rounded-md z-10">
+                {currentIndex + 1} / {images.length}
+            </div>
+        </div>
+    );
 }
 
 const experiences: ExperienceItem[] = [
@@ -20,7 +119,8 @@ const experiences: ExperienceItem[] = [
         details: [
             "Developed automated test scripts to validate core banking modules, improving test efficiency and regression coverage",
             "Performed API and backend testing to ensure data integrity and system reliability"
-        ]
+        ],
+        images: ["/experience/scb1.jpg", "/experience/scb2.jpg"]
     },
     {
         id: 2,
@@ -31,7 +131,8 @@ const experiences: ExperienceItem[] = [
             "Built n8n automation workflows to optimize internal BD processes, reducing manual workload by 20% (Work on Skooldio Hackathon)",
             "Analyzed market and product performance data to identify growth opportunities",
             "Translated data insights into actionable recommendations to support decision-making for internal stakeholders"
-        ]
+        ],
+        images: ["/experience/skd1.jpg", "/experience/skd2.jpg", "/experience/skd3.jpg", "/experience/skd4.jpg"]
     },
     {
         id: 3,
@@ -43,7 +144,8 @@ const experiences: ExperienceItem[] = [
             "Prioritized product backlog based on user impact, feasibility, and business goals",
             "Worked closely with UX and engineering teams to iterate features through feedback and testing",
             "Supported feature launches from discovery to release, including post-launch evaluation and improvement"
-        ]
+        ],
+        pdfFile: "/experience/innovasive_po.pdf"
     },
     {
         id: 4,
@@ -53,7 +155,8 @@ const experiences: ExperienceItem[] = [
         details: [
             "Conducted usability testing and synthesized user feedback into actionable insights",
             "Collaborated with product and design teams to inform UI improvements and product decisions"
-        ]
+        ],
+        pdfFile: "/experience/ux.pdf"
     },
     {
         id: 5,
@@ -62,7 +165,8 @@ const experiences: ExperienceItem[] = [
         duration: "Jun - Jul 2023",
         details: [
             "Built responsive web interfaces and collaborated with designers and product teams to implement user requirements"
-        ]
+        ],
+        pdfFile: "/experience/innovasive.pdf"
     }
 ];
 
@@ -142,6 +246,47 @@ export default function Experience() {
                             </button>
                         </div>
 
+                        {/* Image Slideshow */}
+                        {selectedExp.images && selectedExp.images.length > 0 && (
+                            <div className="relative h-72 w-full bg-black">
+                                <ImageSlideshow
+                                    images={selectedExp.images}
+                                    alt={selectedExp.company}
+                                    className="h-full w-full"
+                                    imageClassName="object-contain"
+                                />
+                            </div>
+                        )}
+
+                        {/* PDF Preview */}
+                        {selectedExp.pdfFile && (
+                            <div className="border-b border-gray-100">
+                                <div className="relative w-full h-[500px] bg-gray-100">
+                                    <iframe
+                                        src={`${selectedExp.pdfFile}#toolbar=0&navpanes=0`}
+                                        className="w-full h-full"
+                                        title={`${selectedExp.role} - Document`}
+                                    />
+                                </div>
+                                <div className="p-4 bg-gray-50 flex items-center justify-between">
+                                    <div className="flex items-center gap-2 text-gray-600">
+                                        <FaFilePdf className="text-red-500" />
+                                        <span className="text-sm font-medium">Document Preview</span>
+                                    </div>
+                                    <a
+                                        href={selectedExp.pdfFile}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 px-4 py-2 bg-line-green text-white text-sm font-medium rounded-lg hover:bg-[#05b34c] transition-colors"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <FaExternalLinkAlt size={12} />
+                                        <span>Open Full PDF</span>
+                                    </a>
+                                </div>
+                            </div>
+                        )}
+
                         {/* Body */}
                         <div className="p-8">
                             <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Responsibilities</h4>
@@ -153,16 +298,6 @@ export default function Experience() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
-
-                        {/* Footer */}
-                        <div className="p-6 border-t border-gray-100 bg-gray-50 rounded-b-2xl text-right">
-                            <button
-                                onClick={closeModal}
-                                className="px-6 py-2 bg-gray-200 text-gray-800 font-medium rounded-lg hover:bg-gray-300 transition-colors"
-                            >
-                                Close
-                            </button>
                         </div>
                     </div>
                 </div>

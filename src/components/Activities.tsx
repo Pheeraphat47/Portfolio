@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 interface Activity {
     id: number;
@@ -11,7 +11,7 @@ interface Activity {
     role: string;
     organization?: string;
     duration: string;
-    image: string;
+    images: string[];
     details: string[];
     techStack?: string[];
     link?: string;
@@ -24,19 +24,20 @@ const activities: Activity[] = [
         title: "Yakteaw (AI Travel Recommendation Platform)",
         role: "Won the Botnoi OpenAI Hackfest in the Hospitality & Food & Beverage category",
         duration: "Aug 2025 - Present",
-        image: "/activities/yakteaw.webp",
+        images: ["/activities/yakteaw.webp"],
         details: [
             "Focused on solving user travel decision pain points through personalized recommendations",
             "Evaluated AI output quality and iterated prompts to improve recommendation relevance"
         ],
-        techStack: ["Nuxt.js", "Tailwind CSS", "Golang", "Langchain", "GitLab CI/CD", "Docker", "Gemini", "Google Maps API"]
+        techStack: ["Nuxt.js", "Tailwind CSS", "Golang", "Langchain", "GitLab CI/CD", "Docker", "Gemini", "Google Maps API"],
+        link: "https://bscit.sit.kmutt.ac.th/capstone25/cp25sy2/"
     },
     {
         id: 2,
         title: "Bangkok Climathon Environhack",
         role: "1st Runner-Up",
         duration: "Oct 2022",
-        image: "/activities/climathon.webp",
+        images: ["/activities/climathon.webp"],
         details: [
             "Competed among 9 teams in the final round, conducted in-depth SWOT Analysis to address augmentin green spaces in Bangkok",
             "Assisted in operational planning for the project's seamless execution"
@@ -47,7 +48,7 @@ const activities: Activity[] = [
         title: "Charm Case Competition",
         role: "1st Runner-Up at Chulalongkorn University",
         duration: "Aug - Sep 2022",
-        image: "/activities/charmcasecompetition.webp",
+        images: ["/activities/charmcasecompetition.webp"],
         details: [
             "Competed among 51 University teams, created a competitive strategy for the Chula Co-op Store business"
         ]
@@ -57,7 +58,13 @@ const activities: Activity[] = [
         title: "Vice President of the Student Association, School of Information Technology",
         role: "Student Representative & Primary Liaison",
         duration: "2023 - 2024",
-        image: "/activities/SamoSIT.webp",
+        images: [
+            "/activities/SamoSIT.webp",
+            "/activities/SamoSIT.jpg",
+            "/activities/SamoSIT3.jpg",
+            "/activities/SamoSIT4.png",
+            "/activities/SamoSIT5.png"
+        ],
         details: [
             "Served as a student representative and primary liaison with faculty and university student organizations",
             "Led planning and execution of faculty-level activities, managing teams and timelines",
@@ -69,7 +76,12 @@ const activities: Activity[] = [
         title: "Vice President of KMUTT Startup Playground",
         role: "Vice President & Project Coordinator",
         duration: "2023 - 2024",
-        image: "/activities/kmuttstartupplayground1.webp",
+        images: [
+            "/activities/kmuttstartupplayground1.webp",
+            "/activities/kmuttstartupplayground2.webp",
+            "/activities/kmuttstartupplayground3.webp",
+            "/activities/kmuttstartupplayground4.webp"
+        ],
         details: [
             "Business Innovation: Facilitated hands-on activities for ideating innovative business solutions",
             "Investor Pitching: Arranged pitching sessions to impart effective presentation skills to investors",
@@ -80,6 +92,101 @@ const activities: Activity[] = [
         ]
     }
 ];
+
+// Slideshow Component
+function ImageSlideshow({ 
+    images, 
+    alt, 
+    className = "",
+    imageClassName = "",
+    showIndicators = true
+}: { 
+    images: string[]; 
+    alt: string; 
+    className?: string;
+    imageClassName?: string;
+    showIndicators?: boolean;
+}) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const goToPrevious = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    };
+
+    const goToNext = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    };
+
+    const goToSlide = (e: React.MouseEvent, index: number) => {
+        e.stopPropagation();
+        setCurrentIndex(index);
+    };
+
+    if (images.length === 1) {
+        return (
+            <div className={`relative ${className}`}>
+                <Image
+                    src={images[0]}
+                    alt={alt}
+                    fill
+                    className={imageClassName}
+                />
+            </div>
+        );
+    }
+
+    return (
+        <div className={`relative ${className}`}>
+            <Image
+                src={images[currentIndex]}
+                alt={`${alt} - ${currentIndex + 1}`}
+                fill
+                className={imageClassName}
+            />
+            
+            {/* Navigation Arrows */}
+            <button
+                onClick={goToPrevious}
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors z-10"
+                aria-label="Previous image"
+            >
+                <FaChevronLeft size={16} />
+            </button>
+            <button
+                onClick={goToNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors z-10"
+                aria-label="Next image"
+            >
+                <FaChevronRight size={16} />
+            </button>
+
+            {/* Indicators */}
+            {showIndicators && (
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {images.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={(e) => goToSlide(e, index)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                                index === currentIndex 
+                                    ? 'bg-white w-4' 
+                                    : 'bg-white/50 hover:bg-white/80'
+                            }`}
+                            aria-label={`Go to image ${index + 1}`}
+                        />
+                    ))}
+                </div>
+            )}
+
+            {/* Image Counter */}
+            <div className="absolute top-3 right-3 px-2 py-1 bg-black/50 text-white text-xs rounded-md z-10">
+                {currentIndex + 1} / {images.length}
+            </div>
+        </div>
+    );
+}
 
 export default function Activities() {
     const [selectedActivity, setSelectedActivity] = useState<Activity | null>(null);
@@ -110,15 +217,15 @@ export default function Activities() {
                             onClick={() => openModal(activity)}
                             className="group bg-white rounded-xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer h-full flex flex-col"
                         >
-                            {/* Image Container */}
+                            {/* Image Container with Slideshow */}
                             <div className="relative h-64 overflow-hidden bg-gray-100">
-                                <Image
-                                    src={activity.image}
+                                <ImageSlideshow
+                                    images={activity.images}
                                     alt={activity.title}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    className="h-full w-full"
+                                    imageClassName="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300 pointer-events-none" />
                             </div>
 
                             {/* Content - Title Only */}
@@ -150,13 +257,13 @@ export default function Activities() {
                             <FaTimes size={20} />
                         </button>
 
-                        {/* Modal Image */}
+                        {/* Modal Image with Slideshow */}
                         <div className="relative h-96 w-full flex-shrink-0 bg-black">
-                            <Image
-                                src={selectedActivity.image}
+                            <ImageSlideshow
+                                images={selectedActivity.images}
                                 alt={selectedActivity.title}
-                                fill
-                                className="object-contain"
+                                className="h-full w-full"
+                                imageClassName="object-contain"
                             />
                         </div>
 
