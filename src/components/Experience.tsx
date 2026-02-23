@@ -117,8 +117,9 @@ const experiences: ExperienceItem[] = [
         company: "Siam Commercial Bank Public Company Limited",
         duration: "Sep – Feb 2025",
         details: [
-            "Developed automated test scripts to validate core banking modules, improving test efficiency and regression coverage",
-            "Performed API and backend testing to ensure data integrity and system reliability"
+            "Developed internal QA automation tools in Python to validate API responses (XML/JSON) against system specifications, improving testing accuracy and efficiency for manual QA teams",
+            "Supported end-to-end testing using Cypress, prepared test data and documentation, and collaborated with developers to identify and resolve defects",
+            "Assisted senior QA in designing test scenarios to ensure comprehensive validation coverage aligned with business requirements"
         ],
         images: ["/experience/scb1.jpg", "/experience/scb2.jpg"]
     },
@@ -166,7 +167,7 @@ const experiences: ExperienceItem[] = [
         details: [
             "Built responsive web interfaces and collaborated with designers and product teams to implement user requirements"
         ],
-        pdfFile: "/experience/innovasive.pdf"
+        pdfFile: "/experience/innovasive_frontend.pdf"
     }
 ];
 
