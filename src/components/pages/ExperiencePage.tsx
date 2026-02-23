@@ -33,8 +33,9 @@ export default function ExperiencePage() {
             </div>
             <span className="timeline-date">Sep – Feb 2025</span>
             <ul style={{ marginLeft: '20px', listStyleType: 'disc', color: 'var(--light-gray)' }}>
-              <li className="timeline-text">Developed automated test scripts to validate core banking modules, improving test efficiency and regression coverage</li>
-              <li className="timeline-text">Performed API and backend testing to ensure data integrity and system reliability</li>
+              <li className="timeline-text">•	Developed internal QA automation tools in Python to validate API responses (XML/JSON) against system specifications, improving testing accuracy and efficiency for manual QA teams</li>
+              <li className="timeline-text">•	Supported end-to-end testing using Cypress, prepared test data and documentation, and collaborated with developers to identify and resolve defects</li>
+               <li className="timeline-text">• Assisted senior QA in designing test scenarios to ensure comprehensive validation coverage aligned with business requirements</li>
             </ul>
           </li>
 
