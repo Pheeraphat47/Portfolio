@@ -103,13 +103,9 @@ export default function Contact() {
                   <span className="font-body text-sm">pheeraphat.dhi@gmail.com</span>
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-white/70">
-                <FaPhone size={14} className="text-sage" />
-                <span className="font-body text-sm">Available upon request</span>
-              </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/pheeraphat"
+                  href="https://www.linkedin.com/in/pheeraphat-dhirachaisuphakij/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
@@ -131,7 +127,7 @@ export default function Contact() {
           </p>
           <div className="flex gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/Pheeraphat47"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/60 transition-colors"
@@ -139,7 +135,7 @@ export default function Contact() {
               <FaGithub size={14} />
             </a>
             <a
-              href="https://linkedin.com/in/pheeraphat"
+              href="https://www.linkedin.com/in/pheeraphat-dhirachaisuphakij/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/60 transition-colors"

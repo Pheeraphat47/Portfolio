@@ -15,6 +15,7 @@ interface ExperienceItem {
   details: string[];
   images?: string[];
   pdfFile?: string;
+  logo?: string;
 }
 
 function ImageSlideshow({ images, alt }: { images: string[]; alt: string }) {
@@ -67,6 +68,7 @@ const experiences: ExperienceItem[] = [
       'Designed test scenarios for comprehensive validation coverage',
     ],
     images: ['/experience/scb1.jpg', '/experience/scb2.jpg'],
+    logo: '/Logo/SCB_Logo.png',
   },
   {
     id: 2,
@@ -81,6 +83,7 @@ const experiences: ExperienceItem[] = [
       'Translated data insights into actionable recommendations for stakeholders',
     ],
     images: ['/experience/skd1.jpg', '/experience/skd2.jpg', '/experience/skd3.jpg', '/experience/skd4.jpg'],
+    logo: '/Logo/Skooldio_Logo.png',
   },
   {
     id: 3,
@@ -95,6 +98,7 @@ const experiences: ExperienceItem[] = [
       'Supported feature launches from discovery to release including post-launch evaluation',
     ],
     pdfFile: '/experience/innovasive_po.pdf',
+    logo: '/Logo/innovasive_logo.png',
   },
   {
     id: 4,
@@ -108,6 +112,7 @@ const experiences: ExperienceItem[] = [
       'Collaborated with product and design teams to inform UI improvements',
     ],
     pdfFile: '/experience/ux.pdf',
+    logo: '/Logo/adirek&co_Logo.png',
   },
   {
     id: 5,
@@ -120,6 +125,7 @@ const experiences: ExperienceItem[] = [
       'Built responsive web interfaces and collaborated with designers and product teams',
     ],
     pdfFile: '/experience/innovasive_frontend.pdf',
+    logo: '/Logo/innovasive_logo.png',
   },
 ];
 
@@ -151,10 +157,10 @@ export default function Experience() {
                 }}
               >
                 {/* Image Side */}
-                <div className="md:w-1/2 relative aspect-video md:aspect-auto min-h-[250px] bg-gray-100">
-                  {hasImage ? (
+                <div className="md:w-1/2 relative aspect-video md:aspect-auto min-h-[250px] bg-gray-100 flex items-center justify-center">
+                  {exp.logo ? (
                     <Image
-                      src={exp.images![0]}
+                      src={exp.logo}
                       alt={exp.company}
                       fill
                       className="object-cover"
@@ -206,10 +212,21 @@ export default function Experience() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start z-10">
-              <div>
-                <h3 className="text-2xl font-heading font-bold text-dark pr-8">{selectedExp.role}</h3>
-                <p className="text-sage-dark font-body text-sm mt-1">{selectedExp.company}</p>
-                <p className="text-muted font-body text-xs mt-1">{selectedExp.duration}</p>
+              <div className="flex items-start gap-4">
+                {selectedExp.logo && (
+                  <Image
+                    src={selectedExp.logo}
+                    alt={`${selectedExp.company} logo`}
+                    width={48}
+                    height={48}
+                    className="object-contain flex-shrink-0 mt-1"
+                  />
+                )}
+                <div>
+                  <h3 className="text-2xl font-heading font-bold text-dark pr-8">{selectedExp.role}</h3>
+                  <p className="text-sage-dark font-body text-sm mt-1">{selectedExp.company}</p>
+                  <p className="text-muted font-body text-xs mt-1">{selectedExp.duration}</p>
+                </div>
               </div>
               <button
                 onClick={() => {

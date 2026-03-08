@@ -19,9 +19,8 @@ export default function Home() {
       <About />
       <Timeline />
       <Experience />
-      <Gallery />
       <CaseStudies />
-      <Projects />
+      <Gallery />
       <Contact />
     </main>
   );

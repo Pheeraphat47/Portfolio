@@ -22,7 +22,7 @@ export default function About() {
             <div className="absolute -left-4 -top-4 w-full h-full bg-sage/30 -z-10" />
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto">
               <Image
-                src="/profile.jpg"
+                src="/experience/skd1.jpg"
                 alt="Pheeraphat Dherachaisuphakij"
                 fill
                 className="object-cover"
@@ -70,7 +70,7 @@ export default function About() {
             {/* CTA Buttons */}
             <div className="flex gap-4 pt-4">
               <a
-                href="#projects"
+                href="#case-studies"
                 className="border-2 border-dark text-dark px-6 py-3 text-sm font-body tracking-wider hover:bg-dark hover:text-white transition-colors duration-300"
               >
                 Portfolio

@@ -19,10 +19,13 @@ interface Props {
 }
 
 export default function CaseStudyDetail({ study, onClose }: Props) {
-  const steps = stepConfig.map((cfg) => ({
-    ...cfg,
-    ...study.caseStudy[cfg.key],
-  }));
+  const steps = stepConfig
+    .filter((cfg) => study.caseStudy[cfg.key])
+    .map((cfg, index) => ({
+      ...cfg,
+      ...study.caseStudy[cfg.key]!,
+      displayNumber: String(index + 1).padStart(2, '0'),
+    }));
 
   return (
     <div
@@ -86,12 +89,12 @@ export default function CaseStudyDetail({ study, onClose }: Props) {
               {/* Step Number Badge */}
               <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-sage flex items-center justify-center">
                 <span className="text-[9px] font-body font-bold text-dark">
-                  {step.number}
+                  {step.displayNumber}
                 </span>
               </div>
 
               <p className="text-[10px] text-sage-dark font-body tracking-widest uppercase mb-1">
-                Step {step.number}
+                Step {step.displayNumber}
               </p>
               <h3 className="text-xl md:text-2xl font-heading font-bold text-dark mb-3">
                 {step.icon} {step.title}

@@ -8,7 +8,7 @@ const navLinks = [
   { name: 'About Me', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Case Studies', href: '#case-studies' },
-  { name: 'Projects', href: '#projects' },
+  { name: 'Activities', href: '#activities' },
   { name: 'Contact Me', href: '#contact' },
 ];
 
@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       {/* Top Bar */}
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center py-4 border-b border-gray-200">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <a
             href="#"
@@ -72,19 +72,8 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Contact Info - Desktop */}
-          <div className="hidden lg:flex items-center gap-8 text-sm">
-            <div>
-              <span className="text-[10px] text-muted uppercase tracking-wider">Write Me</span>
-              <p className="text-dark font-medium font-body text-xs">pheeraphat.dhi@gmail.com</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Nav Bar */}
-        <div className="flex justify-between items-center py-3">
           {/* Nav Links - Desktop */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -99,11 +88,11 @@ export default function Navbar() {
 
           {/* Social Icons - Desktop */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/Pheeraphat47" target="_blank" rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-muted hover:text-dark hover:border-dark transition-colors">
               <FaGithub size={14} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/pheeraphat-dhirachaisuphakij/" target="_blank" rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-muted hover:text-dark hover:border-dark transition-colors">
               <FaLinkedin size={14} />
             </a>
@@ -139,11 +128,11 @@ export default function Navbar() {
           </a>
         ))}
         <div className="flex gap-4 pt-4">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/Pheeraphat47" target="_blank" rel="noopener noreferrer"
             className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-muted hover:text-dark transition-colors">
             <FaGithub size={14} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/pheeraphat-dhirachaisuphakij/" target="_blank" rel="noopener noreferrer"
             className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-muted hover:text-dark transition-colors">
             <FaLinkedin size={14} />
           </a>

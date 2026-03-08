@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import CaseStudyDetail from './CaseStudyDetail';
+import { useState } from "react";
+import Image from "next/image";
+import CaseStudyDetail from "./CaseStudyDetail";
 
 export interface CaseStudyStep {
   title: string;
@@ -22,12 +22,12 @@ export interface CaseStudyProject {
   thumbnail: string;
   summary: string;
   caseStudy: {
-    problem: CaseStudyStep;
-    understanding: CaseStudyStep;
-    solutions: CaseStudyStep;
-    prototype: CaseStudyStep;
-    testing: CaseStudyStep;
-    launch: CaseStudyStep;
+    problem?: CaseStudyStep;
+    understanding?: CaseStudyStep;
+    solutions?: CaseStudyStep;
+    prototype?: CaseStudyStep;
+    testing?: CaseStudyStep;
+    launch?: CaseStudyStep;
   };
   techStack: string[];
 }
@@ -35,176 +35,195 @@ export interface CaseStudyProject {
 const caseStudies: CaseStudyProject[] = [
   {
     id: 1,
-    title: 'Yakteaw — AI Travel Recommendation Platform',
-    role: 'Product Owner / Scrum Master',
-    duration: 'Aug 2025 – Present',
-    thumbnail: '/activities/yakteaw.webp',
+    title: "Skooldio BD Process Automation",
+    role: "Business Development Intern",
+    duration: "Jun – Aug 2025",
+    thumbnail: "/experience/skd4.jpg",
     summary:
-      'Solved travel decision fatigue by building a personalized AI recommendation platform that helps users plan trips in minutes instead of hours.',
+      "Identified and automated repetitive BD workflows, reducing manual workload by 20% and enabling the team to focus on high-value strategic initiatives.",
     caseStudy: {
       problem: {
-        title: 'Identify the Problem',
+        title: "Identify the Problem",
         content:
-          'Travelers spend 3–5 hours per trip researching destinations across multiple platforms. Information is scattered, reviews are inconsistent, and recommendations rarely match personal preferences — leading to decision fatigue and suboptimal travel experiences.',
+          "The Business Development team spent significant time on repetitive manual tasks — data entry, lead tracking updates, and report generation — taking away from strategic work like market analysis and partnership outreach.",
         evidence:
-          'Interviewed 15 users and found that 80% felt overwhelmed by the number of choices and inconsistent information across platforms.',
+          "Time-tracked team activities for 2 weeks and found that 20% of working hours were spent on tasks that could be automated.",
       },
       understanding: {
-        title: 'Understand the Problem',
+        title: "Understand the Problem",
         content:
-          'Conducted 15 user interviews, performed competitive analysis (TripAdvisor, Google Maps, Wongnai), created 3 user personas, and mapped pain points through an Affinity Diagram. Key insight: users don\'t just want "top places" — they want recommendations that match their mood, budget, and travel style.',
+          "Shadowed team members through their daily workflows, documented each step in detail, and identified bottlenecks. Created a process map highlighting 5 high-frequency, low-complexity tasks as automation candidates.",
       },
       solutions: {
-        title: 'Brainstorm Solutions',
+        title: "Brainstorm Solutions",
         content:
-          'Brainstormed 5 approaches and evaluated them using an Impact–Effort Matrix. Selected AI-powered personalized recommendations because of high user impact and feasibility with our tech stack. Alternative approaches (curated lists, social-based recs) were deprioritized due to lower personalization and scalability.',
+          "Evaluated automation options: custom scripts, Zapier, n8n (self-hosted), and Make. Chose n8n for its flexibility, self-hosting capability (data privacy), and visual workflow builder that non-technical team members could maintain.",
       },
       prototype: {
-        title: 'Prototype & Mockup',
+        title: "Prototype & Mockup",
         content:
-          'Created low-fidelity wireframes in Figma, mapped out the core user flow (input preferences → get recommendations → build itinerary), then iterated to a high-fidelity interactive prototype. Validated information architecture with card sorting sessions.',
+          "Built proof-of-concept automation flows for the 2 highest-impact tasks first: (1) automated lead data enrichment and (2) weekly performance report generation. Demoed to the team for feedback before full implementation.",
       },
       testing: {
-        title: 'Test & Iterate',
+        title: "Test & Iterate",
         content:
-          'Ran usability tests with 10 users using think-aloud protocol. Collected feedback across 3 iteration rounds. Major finding: users wanted to understand why the AI recommended each place — which led to adding a "Why this place?" explanation feature.',
+          "Ran automations in parallel with manual processes for 1 week to validate accuracy. Fixed edge cases with data formatting and added error notifications. Trained team members on monitoring and adjusting workflows.",
         keyInsight:
-          'Users need transparency in AI recommendations to build trust — adding reasoning behind suggestions increased user confidence by 60%.',
+          "Building in failure notifications was critical — the team needed confidence that automated tasks were completing correctly before fully trusting the system.",
       },
       launch: {
-        title: 'Launch & Success Metrics',
+        title: "Launch & Success Metrics",
         content:
-          'Executed a phased launch: soft launch with 50 early adopters → gathered feedback → full public launch. Won the Botnoi OpenAI Hackfest in the Hospitality category.',
+          "Fully deployed 5 automation workflows and created documentation for the team to maintain and extend them independently.",
         metrics: [
-          { label: 'Planning Time Reduction', value: '70%', description: 'From 3-5 hours to under 30 minutes' },
-          { label: 'Task Completion Rate', value: '85%', description: 'Users successfully created a travel plan' },
-          { label: 'User Satisfaction', value: '4.5/5', description: 'Post-launch survey score' },
+          {
+            label: "Manual Workload",
+            value: "-20%",
+            description: "Reduction in repetitive manual tasks",
+          },
+          {
+            label: "Report Generation",
+            value: "5min → auto",
+            description: "From manual compilation to automated delivery",
+          },
+          {
+            label: "Data Accuracy",
+            value: "99.5%",
+            description: "Automation accuracy vs manual baseline",
+          },
         ],
         strategy:
-          'Phased rollout: Early adopter group (50 users) → iterate on feedback → public launch via university channels and social media.',
+          "Phased automation: start with 2 highest-impact workflows → validate → expand to remaining 3 tasks, with team training throughout.",
       },
     },
-    techStack: ['Nuxt.js', 'Tailwind CSS', 'Golang', 'Langchain', 'Docker', 'Gemini API'],
+    techStack: ["n8n", "Google Sheets API", "REST APIs", "Python"],
   },
   {
     id: 2,
-    title: 'IT Bangmod Kradan Kanban',
-    role: 'Full Stack Developer / Product Thinker',
-    duration: 'Jan – May 2024',
-    thumbnail: '/activities/SamoSIT.webp',
+    title: "CU Co-op Store Revamp (Charm Case Competition)",
+    role: "Business Analyst / Team Member",
+    duration: "",
+    thumbnail: "/activities/charmcasecompetition.webp",
     summary:
-      'Redesigned a team task management workflow to reduce task completion time and improve cross-team visibility through a Kanban-based system.',
+      "นำเสนอกลยุทธ์เพื่อเพิ่มยอดขายและการมีส่วนร่วมของนิสิตกับสหกรณ์จุฬาฯ ผ่านระบบหุ้น การจัดโปรโมชันชุดสินค้า และโครงการฝึกประสบการณ์ทำงาน",
     caseStudy: {
       problem: {
-        title: 'Identify the Problem',
+        title: "Identify the Problem",
         content:
-          'Student project teams struggled with tracking task progress across multiple members. Existing tools were either too complex (Jira) or too simple (shared spreadsheets), leading to missed deadlines and duplicated work.',
+          "สหกรณ์จุฬาฯ เผชิญปัญหารายได้จากการขายลดลง นิสิตขาดการมีส่วนร่วม และมีการแข่งขันสูงจากทั้งในและนอกมหาวิทยาลัย นอกจากนี้สินค้ายังไม่ตอบโจทย์การใช้งานของนิสิต",
         evidence:
-          'Surveyed 30 students across 6 project teams — 73% reported losing track of task assignments at least once per sprint.',
+          "จากแบบสำรวจนิสิตจำนวน 77 คน พบว่าสาเหตุที่ไม่ซื้อสินค้าสหกรณ์เพราะไม่มีสินค้าหรือแบรนด์ที่ต้องการ และมีนิสิตถึง 76.6% ที่ไม่ทราบว่าสหกรณ์มีเปิดขายหุ้น",
       },
       understanding: {
-        title: 'Understand the Problem',
+        title: "Understand the Problem",
         content:
-          'Mapped the existing workflow through observation and interviews. Identified 3 core pain points: (1) no single source of truth for task status, (2) unclear ownership of tasks, and (3) no visibility into blockers until standup meetings.',
+          "วิเคราะห์ข้อมูลงบการเงินปี 2564 พบว่าไม่มีค่าใช้จ่ายด้านการโฆษณาประชาสัมพันธ์เลย (0 บาท) และจำนวนสมาชิกสามัญยังมีจำนวนน้อยมากเมื่อเทียบกับนิสิตทั้งหมด ทำให้นิสิตมีความสัมพันธ์กับสหกรณ์เพียงแค่ในฐานะลูกค้าทั่วไปเท่านั้น",
       },
       solutions: {
-        title: 'Brainstorm Solutions',
+        title: "Brainstorm Solutions",
         content:
-          'Evaluated 4 approaches: enhanced spreadsheet, Trello integration, custom Kanban board, and Slack bot. Chose a custom Kanban board to provide the right level of simplicity while supporting real-time status updates and team-specific workflows.',
+          "นำเสนอ 3 กลยุทธ์หลัก ได้แก่ 1) ดึงดูดนิสิตด้วยการโปรโมทระบบหุ้นของสหกรณ์ 2) ปรับกลยุทธ์การตลาดออนไลน์และออฟไลน์ รวมถึงการจัดชุด Starter Kit 3) สร้างโครงการอบรมระยะสั้น 2-4 สัปดาห์ ให้นิสิตเข้ามาช่วยงานสหกรณ์",
       },
       prototype: {
-        title: 'Prototype & Mockup',
+        title: "Prototype & Mockup",
         content:
-          'Designed wireframes for the board view, task creation flow, and notification system. Validated with 2 pilot teams before development. Focused on drag-and-drop UX for intuitive status changes.',
-      },
-      testing: {
-        title: 'Test & Iterate',
-        content:
-          'Deployed to 3 teams for a 2-week pilot. Collected daily feedback and iterated on: filter/sort functionality, task limit per column (WIP limits), and notification frequency. Users requested a deadline warning feature — added in iteration 2.',
-        keyInsight:
-          'WIP limits were initially resisted but became the most valued feature — teams reported better focus and fewer context switches.',
+          "ออกแบบภาพจำลอง (Mockup) สำหรับโพสต์โปรโมทบนโซเชียลมีเดีย ป้ายโปรโมชันหน้าร้าน และตัวอย่างการจัดแพ็กเกจชุดสินค้า (Starter Kit) สำหรับนิสิตปี 1 เช่น ชุดนิสิตชายราคา 1,539 บาท ชุดนิสิตหญิงราคา 1,119 บาท และชุดแล็ปคณะวิศวะราคา 2,399 บาท",
       },
       launch: {
-        title: 'Launch & Success Metrics',
+        title: "Launch & Success Metrics",
         content:
-          'Rolled out to the full cohort of project teams within the department.',
+          "วางแผนงบประมาณจำนวน 37,000 บาท สำหรับการดำเนินงานด้านประชาสัมพันธ์ การทำตลาด และโครงการฝึกประสบการณ์",
         metrics: [
-          { label: 'On-Time Delivery', value: '+35%', description: 'Tasks completed before deadline' },
-          { label: 'Blocker Resolution', value: '2x faster', description: 'Average time to resolve blockers' },
-          { label: 'Team Adoption', value: '90%', description: 'Teams actively using the board daily' },
+          {
+            label: "Serviceable Obtainable Market (SOM)",
+            value: "6,000,000 บาท",
+            description:
+              "มูลค่าตลาดขั้นต่ำที่สหกรณ์ควรจะขายชุดนิสิตได้ (ประมาณ 50%)",
+          },
         ],
         strategy:
-          'Gradual rollout: pilot with 3 teams → address top feedback → department-wide launch with onboarding guide.',
+          "เน้นการสื่อสารด้วย Key Message 'ครบ จบ ถูกระเบียบ Only at CU CO-OP' และใช้ประโยชน์จากทำเลที่ตั้งสหกรณ์ที่อยู่ใกล้สาขาหอพักนิสิต",
       },
     },
-    techStack: ['Vue.js', 'Spring Boot', 'MySQL'],
+    techStack: ["Business Strategy", "Market Analysis", "Survey Design"],
   },
+
   {
     id: 3,
-    title: 'Skooldio BD Process Automation',
-    role: 'Business Development Intern',
-    duration: 'Jun – Aug 2025',
-    thumbnail: '/activities/climathon.webp',
+    title: "Wat to Park: Pocket Park (Bangkok Climathon)",
+    role: "Team Member",
+    duration: "",
+    thumbnail: "/activities/climathon.webp",
     summary:
-      'Identified and automated repetitive BD workflows, reducing manual workload by 20% and enabling the team to focus on high-value strategic initiatives.',
+      "นำเสนอโครงการพัฒนาพื้นที่เขตธรณีสงฆ์ของวัดแก้วแจ่มฟ้าให้เป็นสวนสาธารณะขนาดเล็ก (Pocket Park) เพื่อแก้ไขปัญหาการขาดแคลนพื้นที่สีเขียวในกรุงเทพฯ",
     caseStudy: {
       problem: {
-        title: 'Identify the Problem',
+        title: "Identify the Problem",
         content:
-          'The Business Development team spent significant time on repetitive manual tasks — data entry, lead tracking updates, and report generation — taking away from strategic work like market analysis and partnership outreach.',
+          "ประชากรในกรุงเทพฯ สามารถเข้าถึงพื้นที่สีเขียวได้ยาก การเดินทางต้องใช้ยานพาหนะซึ่งก่อให้เกิดคาร์บอนไดออกไซด์ (CO2) และรถติด ซึ่งส่งผลให้เกิดปัญหาเกาะความร้อนเมือง (Urban Heat)",
         evidence:
-          'Time-tracked team activities for 2 weeks and found that 20% of working hours were spent on tasks that could be automated.',
+          "กรุงเทพมหานครมีพื้นที่สาธารณะสีเขียวเพียง 40 แห่ง ซึ่งถือว่าไม่เพียงพอต่อความต้องการของประชาชน",
       },
       understanding: {
-        title: 'Understand the Problem',
+        title: "Understand the Problem",
         content:
-          'Shadowed team members through their daily workflows, documented each step in detail, and identified bottlenecks. Created a process map highlighting 5 high-frequency, low-complexity tasks as automation candidates.',
+          "ทำการวิเคราะห์เชิงพื้นที่ผ่าน Spatial Analysis (GIS), Goodwalk Map, Space Syntax Analysis และเก็บข้อมูลแบบสอบถามนำร่อง (Pilot Study) เพื่อศึกษาพฤติกรรมการเดินทางไปสวนสาธารณะ พบว่าพื้นที่วัดทั้ง 488 แห่งในกรุงเทพฯ มีศักยภาพในการดัดแปลงเป็นพื้นที่สาธารณะได้",
       },
       solutions: {
-        title: 'Brainstorm Solutions',
+        title: "Brainstorm Solutions",
         content:
-          'Evaluated automation options: custom scripts, Zapier, n8n (self-hosted), and Make. Chose n8n for its flexibility, self-hosting capability (data privacy), and visual workflow builder that non-technical team members could maintain.',
+          "เสนอให้ใช้พื้นที่ธรณีสงฆ์ของ 'วัดแก้วแจ่มฟ้า' ในเขตบางรัก เป็นพื้นที่นำร่องในการสร้าง Pocket Park เนื่องจากทำเลตั้งอยู่ในแหล่งชุมชน แหล่งเศรษฐกิจ และมีการสัญจรเยอะ เหมาะแก่การสร้างโครงข่ายพื้นที่สีเขียว (Green Space Network)",
       },
       prototype: {
-        title: 'Prototype & Mockup',
+        title: "Prototype & Mockup",
         content:
-          'Built proof-of-concept automation flows for the 2 highest-impact tasks first: (1) automated lead data enrichment and (2) weekly performance report generation. Demoed to the team for feedback before full implementation.',
-      },
-      testing: {
-        title: 'Test & Iterate',
-        content:
-          'Ran automations in parallel with manual processes for 1 week to validate accuracy. Fixed edge cases with data formatting and added error notifications. Trained team members on monitoring and adjusting workflows.',
-        keyInsight:
-          'Building in failure notifications was critical — the team needed confidence that automated tasks were completing correctly before fully trusting the system.',
+          "นำเสนอตัวอย่างรูปแบบการทำ Pocket Park และการจัดพื้นที่ของสถาปนิก เพื่อสร้างระบบนิเวศใหม่ให้กับสิ่งมีชีวิตและเป็นพื้นที่สาธารณะที่ดีของชุมชน",
       },
       launch: {
-        title: 'Launch & Success Metrics',
+        title: "Launch & Success Metrics",
         content:
-          'Fully deployed 5 automation workflows and created documentation for the team to maintain and extend them independently.',
+          "กำหนดแผนโครงการระยะ 15 ปี (แบ่งเป็นระยะ 0-5, 5-10, 10-15 ปี) ครอบคลุมตั้งแต่การคัดเลือกพื้นที่ จัดหาแหล่งเงินทุน การก่อสร้าง ไปจนถึงแผนการสื่อสารเพื่อเปลี่ยนพฤติกรรมการใช้พื้นที่",
         metrics: [
-          { label: 'Manual Workload', value: '-20%', description: 'Reduction in repetitive manual tasks' },
-          { label: 'Report Generation', value: '5min → auto', description: 'From manual compilation to automated delivery' },
-          { label: 'Data Accuracy', value: '99.5%', description: 'Automation accuracy vs manual baseline' },
+          {
+            label: "Environmental Impact",
+            value: "CO2 Reduction",
+            description:
+              "ช่วยลดสัดส่วนของ CO2 ที่เป็นสาเหตุให้เกิดภาวะโลกร้อน และเพิ่มปริมาณออกซิเจน",
+          },
+          {
+            label: "Community Value",
+            value: "Quality of Life",
+            description:
+              "ยกระดับคุณภาพชีวิตให้คนในชุมชนมีพื้นที่สำหรับพบปะและทำกิจกรรม",
+          },
         ],
         strategy:
-          'Phased automation: start with 2 highest-impact workflows → validate → expand to remaining 3 tasks, with team training throughout.',
+          "สร้างความร่วมมือระหว่างกลุ่มผู้มีส่วนได้ส่วนเสียอย่างครอบคลุม ทั้ง กทม., สสส., วัด, สถาบันการศึกษา, และชุมชนในพื้นที่",
       },
     },
-    techStack: ['n8n', 'Google Sheets API', 'REST APIs', 'Python'],
+    techStack: [
+      "GIS / Spatial Analysis",
+      "Space Syntax Analysis",
+      "Urban Planning",
+      "Design Thinking",
+    ],
   },
 ];
 
 export default function CaseStudies() {
-  const [selectedStudy, setSelectedStudy] = useState<CaseStudyProject | null>(null);
+  const [selectedStudy, setSelectedStudy] = useState<CaseStudyProject | null>(
+    null,
+  );
 
   return (
     <section id="case-studies" className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-4xl md:text-5xl font-black text-dark font-heading mb-4">
-          Case Studies
+          Projects & Case Studies
         </h2>
         <p className="text-muted font-body text-sm mb-2">
-          Deep dives into how I identify problems, think through solutions, and deliver measurable impact.
+          Deep dives into how I identify problems, think through solutions, and
+          deliver measurable impact.
         </p>
         <div className="w-full h-px bg-gray-200 mb-12" />
 
@@ -215,7 +234,7 @@ export default function CaseStudies() {
               className="group text-left bg-white overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200 h-full flex flex-col"
               onClick={() => {
                 setSelectedStudy(study);
-                document.body.style.overflow = 'hidden';
+                document.body.style.overflow = "hidden";
               }}
             >
               <div className="relative h-52 w-full overflow-hidden bg-gray-100">
@@ -251,7 +270,7 @@ export default function CaseStudies() {
           study={selectedStudy}
           onClose={() => {
             setSelectedStudy(null);
-            document.body.style.overflow = '';
+            document.body.style.overflow = "";
           }}
         />
       )}
