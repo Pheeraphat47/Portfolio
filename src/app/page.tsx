@@ -1,18 +1,27 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Education from '@/components/Education';
+import Services from '@/components/Services';
+import About from '@/components/About';
+import Timeline from '@/components/Timeline';
+import Gallery from '@/components/Gallery';
 import Experience from '@/components/Experience';
-import Activities from '@/components/Activities';
+import CaseStudies from '@/components/CaseStudies';
+import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <Education />
-      <Activities />
+      <Services />
+      <About />
+      <Timeline />
       <Experience />
+      <Gallery />
+      <CaseStudies />
+      <Projects />
       <Contact />
     </main>
   );

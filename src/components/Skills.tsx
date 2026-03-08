@@ -2,16 +2,16 @@
 
 const skills = [
     {
-        category: "Hard Skills",
-        items: ["Market Research", "Competitive Analysis", "Agile & Scrum", "Data Analysis", "Technical Understanding"]
+        category: "Product & Strategy",
+        items: ["Product Strategy", "User Story Mapping", "Roadmap Planning", "PRD Writing", "Stakeholder Management", "Market Research", "Competitive Analysis", "A/B Testing", "Agile & Scrum"]
     },
     {
         category: "Soft Skills",
-        items: ["Leadership", "Adaptability", "Communication", "Collaboration", "Analytical Thinking", "Problem-Solving"]
+        items: ["Leadership", "Adaptability", "Communication", "Collaboration", "Analytical Thinking", "Problem-Solving", "Cross-functional Coordination"]
     },
     {
         category: "Tools & Technologies",
-        items: ["Jira", "Miro", "Trello", "Figma", "Power BI", "Google Sheets", "Google Slides", "Microsoft Office", "Next.js", "Tailwind CSS"]
+        items: ["Jira", "Notion", "Linear", "Miro", "Figma", "Amplitude", "Google Analytics", "Power BI", "n8n", "SQL"]
     }
 ];
 

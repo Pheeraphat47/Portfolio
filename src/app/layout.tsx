@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "Pheeraphat Portfolio",
-  description: "Pheeraphat Dherachaisuphakij - Project Manager Portfolio",
+  description: "Pheeraphat Dherachaisuphakij - IT & Product Manager Portfolio",
 };
 
 export default function RootLayout({
@@ -14,11 +13,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-
-        <Script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" strategy="afterInteractive" />
-        <Script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" noModule />
-      </head>
       <body>{children}</body>
     </html>
   );
