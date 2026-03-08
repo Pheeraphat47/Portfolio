@@ -32,7 +32,7 @@ export default function About() {
 
           {/* Text */}
           <div className="flex-1 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-black text-dark font-heading leading-tight">
+            <h2 className="text-5xl md:text-5xl text-sage-dark font-bold font-heading mb-4">
               A Few Words<br />About Me
             </h2>
 
@@ -58,28 +58,13 @@ export default function About() {
                 </span>
               ))}
             </div>
-
-            <p className="text-muted font-body text-sm leading-relaxed">
-              My strength is in the full product lifecycle: identifying real user pain points
-              through research, prioritizing solutions based on impact and feasibility,
-              coordinating cross-functional teams to ship, and measuring results with clear
-              success metrics. I believe great products come from deeply understanding
-              the people who use them.
-            </p>
-
             {/* CTA Buttons */}
             <div className="flex gap-4 pt-4">
               <a
                 href="#case-studies"
                 className="border-2 border-dark text-dark px-6 py-3 text-sm font-body tracking-wider hover:bg-dark hover:text-white transition-colors duration-300"
               >
-                Portfolio
-              </a>
-              <a
-                href="#contact"
-                className="border-2 border-dark text-dark px-6 py-3 text-sm font-body tracking-wider hover:bg-dark hover:text-white transition-colors duration-300"
-              >
-                Contact Me
+                My Projects
               </a>
             </div>
           </div>

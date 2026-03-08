@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="container mx-auto px-6 lg:px-12 flex flex-col-reverse md:flex-row items-end min-h-[70vh]">
         {/* Text Content */}
         <div className="flex-1 text-center md:text-left space-y-6 pb-16">
-          <h1 className="text-5xl md:text-7xl font-black text-dark leading-[1.1] font-heading">
+          <h1 className="text-5xl md:text-7xl font-black text-sage-dark leading-[1.1] font-heading">
             Hello, I&apos;m<br />Pheeraphat!
           </h1>
           <p className="text-muted font-body text-base tracking-wide">
-            Aspiring Product Manager — Turning user problems into business impact
+            Aspiring Product Management — Turning user problems into business impact
           </p>
           <div className="pt-4">
             <a

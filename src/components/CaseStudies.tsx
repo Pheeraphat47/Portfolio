@@ -105,44 +105,44 @@ const caseStudies: CaseStudyProject[] = [
     duration: "",
     thumbnail: "/activities/charmcasecompetition.webp",
     summary:
-      "นำเสนอกลยุทธ์เพื่อเพิ่มยอดขายและการมีส่วนร่วมของนิสิตกับสหกรณ์จุฬาฯ ผ่านระบบหุ้น การจัดโปรโมชันชุดสินค้า และโครงการฝึกประสบการณ์ทำงาน",
+      "Proposed strategies to boost sales and student engagement at the CU Cooperative through a share-ownership system, product bundle promotions, and a short-term student internship program.",
     caseStudy: {
       problem: {
         title: "Identify the Problem",
         content:
-          "สหกรณ์จุฬาฯ เผชิญปัญหารายได้จากการขายลดลง นิสิตขาดการมีส่วนร่วม และมีการแข่งขันสูงจากทั้งในและนอกมหาวิทยาลัย นอกจากนี้สินค้ายังไม่ตอบโจทย์การใช้งานของนิสิต",
+          "The CU Cooperative faced declining sales revenue, low student engagement, and growing competition from both on- and off-campus vendors. Products also failed to meet students' practical needs.",
         evidence:
-          "จากแบบสำรวจนิสิตจำนวน 77 คน พบว่าสาเหตุที่ไม่ซื้อสินค้าสหกรณ์เพราะไม่มีสินค้าหรือแบรนด์ที่ต้องการ และมีนิสิตถึง 76.6% ที่ไม่ทราบว่าสหกรณ์มีเปิดขายหุ้น",
+          "A survey of 77 students revealed that the main reason for not shopping at the cooperative was the absence of desired products or brands. Furthermore, 76.6% of students were unaware that the cooperative offered share memberships.",
       },
       understanding: {
         title: "Understand the Problem",
         content:
-          "วิเคราะห์ข้อมูลงบการเงินปี 2564 พบว่าไม่มีค่าใช้จ่ายด้านการโฆษณาประชาสัมพันธ์เลย (0 บาท) และจำนวนสมาชิกสามัญยังมีจำนวนน้อยมากเมื่อเทียบกับนิสิตทั้งหมด ทำให้นิสิตมีความสัมพันธ์กับสหกรณ์เพียงแค่ในฐานะลูกค้าทั่วไปเท่านั้น",
+          "Analysis of the 2021 financial statements revealed zero expenditure on advertising and PR (0 THB), and the number of ordinary members was extremely low relative to the total student population — meaning students perceived the cooperative purely as a retail store rather than a community institution.",
       },
       solutions: {
         title: "Brainstorm Solutions",
         content:
-          "นำเสนอ 3 กลยุทธ์หลัก ได้แก่ 1) ดึงดูดนิสิตด้วยการโปรโมทระบบหุ้นของสหกรณ์ 2) ปรับกลยุทธ์การตลาดออนไลน์และออฟไลน์ รวมถึงการจัดชุด Starter Kit 3) สร้างโครงการอบรมระยะสั้น 2-4 สัปดาห์ ให้นิสิตเข้ามาช่วยงานสหกรณ์",
+          "Proposed 3 core strategies: 1) Drive student buy-in by promoting the cooperative's share-ownership program; 2) Revamp online and offline marketing, including curated product Starter Kits; 3) Launch a 2–4 week student internship program to build ownership and operational capacity.",
       },
       prototype: {
         title: "Prototype & Mockup",
         content:
-          "ออกแบบภาพจำลอง (Mockup) สำหรับโพสต์โปรโมทบนโซเชียลมีเดีย ป้ายโปรโมชันหน้าร้าน และตัวอย่างการจัดแพ็กเกจชุดสินค้า (Starter Kit) สำหรับนิสิตปี 1 เช่น ชุดนิสิตชายราคา 1,539 บาท ชุดนิสิตหญิงราคา 1,119 บาท และชุดแล็ปคณะวิศวะราคา 2,399 บาท",
+          "Designed mockups for social media promotional posts, in-store signage, and sample Starter Kit bundles for first-year students — including a male uniform set (1,539 THB), female uniform set (1,119 THB), and engineering lab kit (2,399 THB).",
       },
       launch: {
         title: "Launch & Success Metrics",
         content:
-          "วางแผนงบประมาณจำนวน 37,000 บาท สำหรับการดำเนินงานด้านประชาสัมพันธ์ การทำตลาด และโครงการฝึกประสบการณ์",
+          "Planned a 37,000 THB budget covering PR activities, marketing campaigns, and the student internship program.",
         metrics: [
           {
             label: "Serviceable Obtainable Market (SOM)",
-            value: "6,000,000 บาท",
+            value: "6,000,000 THB",
             description:
-              "มูลค่าตลาดขั้นต่ำที่สหกรณ์ควรจะขายชุดนิสิตได้ (ประมาณ 50%)",
+              "Minimum addressable market value for uniform sales, estimated at ~50% capture rate.",
           },
         ],
         strategy:
-          "เน้นการสื่อสารด้วย Key Message 'ครบ จบ ถูกระเบียบ Only at CU CO-OP' และใช้ประโยชน์จากทำเลที่ตั้งสหกรณ์ที่อยู่ใกล้สาขาหอพักนิสิต",
+          "Lead with a clear key message — 'Complete, Compliant, Only at CU CO-OP' — and leverage the cooperative's proximity to student dormitories as a distribution advantage.",
       },
     },
     techStack: ["Business Strategy", "Market Analysis", "Survey Design"],
@@ -155,50 +155,50 @@ const caseStudies: CaseStudyProject[] = [
     duration: "",
     thumbnail: "/activities/climathon.webp",
     summary:
-      "นำเสนอโครงการพัฒนาพื้นที่เขตธรณีสงฆ์ของวัดแก้วแจ่มฟ้าให้เป็นสวนสาธารณะขนาดเล็ก (Pocket Park) เพื่อแก้ไขปัญหาการขาดแคลนพื้นที่สีเขียวในกรุงเทพฯ",
+      "Proposed converting underutilized temple land (Dhamma Zone) at Wat Kaew Jaem Fa into a community Pocket Park to address the critical shortage of green space in Bangkok.",
     caseStudy: {
       problem: {
         title: "Identify the Problem",
         content:
-          "ประชากรในกรุงเทพฯ สามารถเข้าถึงพื้นที่สีเขียวได้ยาก การเดินทางต้องใช้ยานพาหนะซึ่งก่อให้เกิดคาร์บอนไดออกไซด์ (CO2) และรถติด ซึ่งส่งผลให้เกิดปัญหาเกาะความร้อนเมือง (Urban Heat)",
+          "Bangkok residents have limited access to green space. Commuting to parks by vehicle contributes to CO2 emissions, traffic congestion, and the Urban Heat Island effect.",
         evidence:
-          "กรุงเทพมหานครมีพื้นที่สาธารณะสีเขียวเพียง 40 แห่ง ซึ่งถือว่าไม่เพียงพอต่อความต้องการของประชาชน",
+          "Bangkok has only 40 public green areas — critically insufficient for a city of its population size.",
       },
       understanding: {
         title: "Understand the Problem",
         content:
-          "ทำการวิเคราะห์เชิงพื้นที่ผ่าน Spatial Analysis (GIS), Goodwalk Map, Space Syntax Analysis และเก็บข้อมูลแบบสอบถามนำร่อง (Pilot Study) เพื่อศึกษาพฤติกรรมการเดินทางไปสวนสาธารณะ พบว่าพื้นที่วัดทั้ง 488 แห่งในกรุงเทพฯ มีศักยภาพในการดัดแปลงเป็นพื้นที่สาธารณะได้",
+          "Conducted spatial analysis using GIS, Goodwalk Maps, and Space Syntax Analysis, supplemented by a pilot survey on park-visiting behaviour. Findings revealed that Bangkok's 488 temple grounds represent significant untapped potential for conversion into accessible public green spaces.",
       },
       solutions: {
         title: "Brainstorm Solutions",
         content:
-          "เสนอให้ใช้พื้นที่ธรณีสงฆ์ของ 'วัดแก้วแจ่มฟ้า' ในเขตบางรัก เป็นพื้นที่นำร่องในการสร้าง Pocket Park เนื่องจากทำเลตั้งอยู่ในแหล่งชุมชน แหล่งเศรษฐกิจ และมีการสัญจรเยอะ เหมาะแก่การสร้างโครงข่ายพื้นที่สีเขียว (Green Space Network)",
+          "Proposed the Dhamma Zone of Wat Kaew Jaem Fa in Bang Rak district as a pilot site — chosen for its central location within a dense residential and commercial area with high foot traffic, making it ideal as a node in a broader Green Space Network.",
       },
       prototype: {
         title: "Prototype & Mockup",
         content:
-          "นำเสนอตัวอย่างรูปแบบการทำ Pocket Park และการจัดพื้นที่ของสถาปนิก เพื่อสร้างระบบนิเวศใหม่ให้กับสิ่งมีชีวิตและเป็นพื้นที่สาธารณะที่ดีของชุมชน",
+          "Presented architectural layout concepts and landscaping models for the Pocket Park, designed to restore local biodiversity and create a functional, welcoming public space for the surrounding community.",
       },
       launch: {
         title: "Launch & Success Metrics",
         content:
-          "กำหนดแผนโครงการระยะ 15 ปี (แบ่งเป็นระยะ 0-5, 5-10, 10-15 ปี) ครอบคลุมตั้งแต่การคัดเลือกพื้นที่ จัดหาแหล่งเงินทุน การก่อสร้าง ไปจนถึงแผนการสื่อสารเพื่อเปลี่ยนพฤติกรรมการใช้พื้นที่",
+          "Defined a 15-year phased project roadmap (0–5, 5–10, 10–15 years) covering site selection, funding acquisition, construction, and a behaviour-change communication campaign to encourage community adoption.",
         metrics: [
           {
             label: "Environmental Impact",
             value: "CO2 Reduction",
             description:
-              "ช่วยลดสัดส่วนของ CO2 ที่เป็นสาเหตุให้เกิดภาวะโลกร้อน และเพิ่มปริมาณออกซิเจน",
+              "Reduces CO2 contributing to global warming and increases local oxygen levels through vegetation.",
           },
           {
             label: "Community Value",
             value: "Quality of Life",
             description:
-              "ยกระดับคุณภาพชีวิตให้คนในชุมชนมีพื้นที่สำหรับพบปะและทำกิจกรรม",
+              "Improves residents' wellbeing by providing accessible space for social interaction and outdoor activities.",
           },
         ],
         strategy:
-          "สร้างความร่วมมือระหว่างกลุ่มผู้มีส่วนได้ส่วนเสียอย่างครอบคลุม ทั้ง กทม., สสส., วัด, สถาบันการศึกษา, และชุมชนในพื้นที่",
+          "Build broad multi-stakeholder collaboration across Bangkok Metropolitan Administration (BMA), the National Health Foundation (THAIHEALTH), temples, academic institutions, and local communities.",
       },
     },
     techStack: [
@@ -218,7 +218,7 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl md:text-5xl font-black text-dark font-heading mb-4">
+        <h2 className="text-5xl md:text-5xl text-sage-dark font-bold font-heading mb-4">
           Projects & Case Studies
         </h2>
         <p className="text-muted font-body text-sm mb-2">

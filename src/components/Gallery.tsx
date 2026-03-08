@@ -9,7 +9,7 @@ const galleryItems = [
   { src: '/activities/SamoSIT3.jpg', title: 'SIT Openhouse 2023', category: 'Head of Workshop sessions' },
   { src: '/activities/Rethink_Restart.png', title: 'Rethink-Restart Workshop 2024, KMUTTACT4S', category: 'Event Organizer' },
   { src: '/activities/SIT Helloworld Goose.png', title: 'SIT Helloworld Goose Camp', category: 'Speaker in DevOps Class' },
-  { src: '/activities/Rethink_Restart.png', title: 'IT Starterpack Camp', category: 'Speaker in Database Class' },
+  { src: '/activities/ITStarterpack.png', title: 'IT Starterpack Camp', category: 'Speaker in Database Class' },
 ];
 
 export default function Gallery() {
@@ -18,7 +18,7 @@ export default function Gallery() {
   return (
     <section id="activities" className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl md:text-5xl font-black text-dark font-heading mb-4">
+        <h2 className="text-5xl md:text-5xl text-sage-dark font-bold font-heading mb-4">
           Activities & Highlights
         </h2>
         <p className="text-muted font-body text-sm mb-2">

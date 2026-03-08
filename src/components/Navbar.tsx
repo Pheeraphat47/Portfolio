@@ -67,7 +67,7 @@ export default function Navbar() {
                 Pheeraphat
               </h1>
               <p className="text-[10px] text-muted tracking-widest uppercase font-body">
-                IT &amp; Product Manager
+                Fresh Graduate IT Student
               </p>
             </div>
           </a>
